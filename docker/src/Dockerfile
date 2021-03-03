@@ -31,6 +31,10 @@ RUN apt update && apt install --no-install-recommends -y \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/*
 
+RUN pip install --upgrade setuptools
+
+RUN pip install --upgrade pip
+
 RUN pip install pykitti \
     jupyter \
     jupytext --upgrade
@@ -42,6 +46,8 @@ RUN pip install pykitti \
 #     && git clone https://ceres-solver.googlesource.com/ceres-solver \
 #     && mkdir -p /opt/ceres-solver/build
 RUN apt update && apt install --no-install-recommends -y libceres-dev
+
+RUN apt install python-tk
 
 # WORKDIR /opt/ceres-solver/build
 # RUN cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF \
