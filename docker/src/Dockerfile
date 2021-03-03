@@ -47,7 +47,7 @@ RUN pip install pykitti \
 #     && mkdir -p /opt/ceres-solver/build
 RUN apt update && apt install --no-install-recommends -y libceres-dev
 
-RUN apt install python-tk
+RUN apt update && apt install --no-install-recommends -y python-tk
 
 # WORKDIR /opt/ceres-solver/build
 # RUN cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF \
