@@ -65,7 +65,7 @@ RUN rm -rf /workspace \
 # Install limo
 WORKDIR /workspace/limo_ws/src
 RUN rm -rf /workspace/limo_ws/src/limo \
-    && git clone https://github.com/johannes-graeter/limo.git \
+    && git clone https://github.com/HainingLuo/limo.git \
     && rm -rf /workspace/limo_ws/src/feature_tracking \
     && git clone https://github.com/johannes-graeter/feature_tracking.git \
     && cd feature_tracking \
